@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary: 174 72% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 220 20% 15%;
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 174 60% 92%;
+    --accent-foreground: 174 72% 25%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 14% 89%;
+    --input: 220 14% 89%;
+    --ring: 174 72% 40%;
+    --radius: 0.625rem;
+
+    --topic-bg: 220 14% 96%;
+    --subtopic-bg: 220 14% 98%;
+    --progress-track: 220 14% 90%;
+    --progress-fill: 174 72% 40%;
+    --drag-handle: 220 10% 70%;
+    --badge-easy: 142 70% 40%;
+    --badge-easy-bg: 142 70% 94%;
+    --badge-medium: 38 92% 50%;
+    --badge-medium-bg: 38 92% 94%;
+    --badge-hard: 0 72% 51%;
+    --badge-hard-bg: 0 72% 94%;
+    --completed-bg: 174 50% 96%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 28% 7%;
+    --foreground: 210 20% 92%;
+    --card: 222 24% 10%;
+    --card-foreground: 210 20% 92%;
+    --popover: 222 24% 10%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 174 72% 46%;
+    --primary-foreground: 222 28% 7%;
+    --secondary: 222 18% 16%;
+    --secondary-foreground: 210 20% 85%;
+    --muted: 222 18% 14%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 174 40% 14%;
+    --accent-foreground: 174 72% 70%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 18% 18%;
+    --input: 222 18% 18%;
+    --ring: 174 72% 46%;
+    --radius: 0.625rem;
+
+    --topic-bg: 222 20% 12%;
+    --subtopic-bg: 222 20% 14%;
+    --progress-track: 222 18% 20%;
+    --progress-fill: 174 72% 46%;
+    --drag-handle: 222 10% 40%;
+    --badge-easy: 142 60% 50%;
+    --badge-easy-bg: 142 40% 14%;
+    --badge-medium: 38 80% 55%;
+    --badge-medium-bg: 38 50% 14%;
+    --badge-hard: 0 65% 55%;
+    --badge-hard-bg: 0 40% 14%;
+    --completed-bg: 174 30% 12%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-mono-display {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
