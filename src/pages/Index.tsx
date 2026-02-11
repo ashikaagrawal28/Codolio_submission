@@ -40,9 +40,11 @@ const Index = () => {
               const matchSearch =
                 !searchQuery ||
                 q.title.toLowerCase().includes(searchQuery.toLowerCase());
+
               const matchDifficulty =
                 difficultyFilter === "all" ||
                 q.difficulty === difficultyFilter;
+
               const matchStatus =
                 statusFilter === "all"
                   ? true
@@ -63,6 +65,7 @@ const Index = () => {
 
     const { source, destination, type } = result;
     if (!destination) return;
+
     if (
       source.droppableId === destination.droppableId &&
       source.index === destination.index
@@ -89,8 +92,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black py-8 px-4">
-      <div className="max-w-3xl mx-auto space-y-6">
+    <div className="min-h-screen bg-background text-foreground py-10 px-6 lg:px-16">
+      <div className="max-w-6xl mx-auto space-y-8 px-6 py-10">
+
         <SheetHeader />
         <StatsPanel />
 
@@ -132,7 +136,7 @@ const Index = () => {
         </DragDropContext>
 
         {filteredTopics.length === 0 && (
-          <div className="text-center py-16 text-gray-500">
+          <div className="text-center py-16 text-muted-foreground">
             <p className="text-lg font-mono">No topics yet</p>
             <p className="text-sm mt-1">
               Click "Add Topic" to get started
@@ -152,3 +156,4 @@ const Index = () => {
 };
 
 export default Index;
+

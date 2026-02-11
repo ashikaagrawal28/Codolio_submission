@@ -1,9 +1,12 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
-  prefix: "",
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -14,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -63,16 +66,6 @@ export default {
         "badge-hard": "hsl(var(--badge-hard))",
         "badge-hard-bg": "hsl(var(--badge-hard-bg))",
         "completed-bg": "hsl(var(--completed-bg))",
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
